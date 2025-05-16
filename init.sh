@@ -1,5 +1,13 @@
 #!/usr/bin/env bash
 
+# Install nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+
+# Install node
+nvm install 22
+nvm use 22
+nvm alias default 22
+
 # Check if Homebrew is installed
 if ! command -v brew &> /dev/null; then
     echo "Installing Homebrew..."
@@ -25,6 +33,7 @@ brew_libs=(
   "git"
   "gource"
   "mas"
+  "pnpm"
   "stripe"
   "supabase"
 )
