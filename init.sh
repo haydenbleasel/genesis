@@ -97,3 +97,13 @@ declare -A mas_apps=(
 for app_name in "${!mas_apps[@]}"; do
     mas install "${mas_apps[$app_name]}"
 done
+
+# Install pnpm global packages
+pnpm_packages=(
+  "vercel"
+)
+
+# Install each package
+for package in "${pnpm_packages[@]}"; do
+  pnpm install -g "$package"
+done
