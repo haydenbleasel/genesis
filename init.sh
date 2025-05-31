@@ -6,3 +6,4 @@ source ./lib/brew.sh
 source ./lib/casks.sh
 source ./lib/mas.sh
 source ./lib/pnpm.sh
+source ./lib/cursor.sh
