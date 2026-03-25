@@ -1,6 +1,6 @@
 # Genesis
 
-Personal macOS bootstrap script for setting up a new machine with Homebrew, Node.js, App Store apps, npm packages, and Cursor extensions.
+Personal macOS bootstrap script for setting up a new machine with Homebrew, Node.js, App Store apps, npm packages, Cursor extensions, a preferred Dock layout, and shell defaults.
 
 ## Usage
 
@@ -27,6 +27,8 @@ The script is designed to be rerun. It skips installed Homebrew formulae, casks,
 - Installs the Mac App Store apps listed in [`lib/mas.sh`](/Users/haydenbleasel/GitHub/genesis/lib/mas.sh)
 - Installs the npm packages listed in [`lib/npm.sh`](/Users/haydenbleasel/GitHub/genesis/lib/npm.sh)
 - Installs the Cursor extensions listed in [`lib/cursor.sh`](/Users/haydenbleasel/GitHub/genesis/lib/cursor.sh)
+- Configures the Dock order listed in [`lib/dock.sh`](/Users/haydenbleasel/GitHub/genesis/lib/dock.sh)
+- Appends shell config to `.zshrc` using [`lib/zshrc.sh`](/Users/haydenbleasel/GitHub/genesis/lib/zshrc.sh)
 
 ## Prerequisites
 
