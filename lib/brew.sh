@@ -1,13 +1,12 @@
 brew_libs=(
   "btop"
+  "bun"
   "ffmpeg"
-  "git-lfs"
   "git"
-  "gource"
+  "git-lfs"
   "mas"
   "pnpm"
   "stripe"
-  "supabase"
 )
 
 for tool in "${brew_libs[@]}"; do
