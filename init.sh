@@ -11,6 +11,8 @@ source "${SCRIPT_DIR}/lib/casks.sh"
 source "${SCRIPT_DIR}/lib/mas.sh"
 source "${SCRIPT_DIR}/lib/npm.sh"
 source "${SCRIPT_DIR}/lib/cursor.sh"
+source "${SCRIPT_DIR}/lib/dock.sh"
+source "${SCRIPT_DIR}/lib/zshrc.sh"
 
 main() {
   ensure_macos
@@ -21,6 +23,8 @@ main() {
   install_mas_apps
   install_npm_packages
   install_cursor_extensions
+  configure_dock
+  configure_zshrc
 }
 
 main "$@"
