@@ -1,7 +1,10 @@
-npm_packages=(
-  "vercel"
-)
+install_npm_packages() {
+  local npm_packages=(
+    "vercel"
+  )
 
-for package in "${npm_packages[@]}"; do
-  npm install -g "$package"
-done
+  local package
+  for package in "${npm_packages[@]}"; do
+    npm install -g "${package}"
+  done
+}

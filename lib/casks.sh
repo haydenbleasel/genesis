@@ -1,31 +1,39 @@
-brew_casks=(
-  "1password-cli"
-  "1password"
-  "arc"
-  "beeper"
-  "chatgpt"
-  "cleanshot"
-  "codex-app"
-  "cursor"
-  "discord"
-  "figma"
-  "github"
-  "google-chrome"
-  "imageoptim"
-  "nordvpn"
-  "notion"
-  "pitch"
-  "readdle-spark"
-  "screen-studio"
-  "signal"
-  "slack"
-  "spotify"
-  "typefully"
-  "warp"
-  "whatsapp"
-  "zoom"
-)
+install_brew_casks() {
+  local brew_casks=(
+    "1password-cli"
+    "1password"
+    "arc"
+    "beeper"
+    "chatgpt"
+    "cleanshot"
+    "codex-app"
+    "cursor"
+    "discord"
+    "figma"
+    "github"
+    "google-chrome"
+    "imageoptim"
+    "nordvpn"
+    "notion"
+    "pitch"
+    "readdle-spark"
+    "screen-studio"
+    "signal"
+    "slack"
+    "spotify"
+    "typefully"
+    "warp"
+    "whatsapp"
+    "zoom"
+  )
 
-for cask in "${brew_casks[@]}"; do
-    brew install --cask "$cask"
-done
+  local cask
+  for cask in "${brew_casks[@]}"; do
+    if brew list --cask "${cask}" >/dev/null 2>&1; then
+      echo "Skipping ${cask}; already installed"
+      continue
+    fi
+
+    brew install --cask "${cask}"
+  done
+}
