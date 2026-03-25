@@ -74,19 +74,38 @@ ensure_genesis_zshrc_block() {
   local start_marker="# >>> genesis >>>"
   local end_marker="# <<< genesis <<<"
 
-  if grep -Fq "${start_marker}" "${zshrc_path}" 2>/dev/null; then
-    echo "Skipping .zshrc updates; Genesis block already exists"
-    return
-  fi
-
   echo "Updating ${zshrc_path}..."
+  local tmp_file
+  tmp_file="$(mktemp)"
 
-  cat <<EOF >> "${zshrc_path}"
+  awk -v start="${start_marker}" -v end="${end_marker}" '
+    BEGIN {
+      in_block = 0
+    }
+    index($0, start) == 1 {
+      in_block = 1
+      next
+    }
+    index($0, end) == 1 {
+      in_block = 0
+      next
+    }
+    in_block == 0 {
+      print
+    }
+  ' "${zshrc_path}" > "${tmp_file}"
+
+  cat <<EOF >> "${tmp_file}"
 
 ${start_marker}
 # Quiet, NPM
 export DISABLE_OPENCOLLECTIVE=1
 export ADBLOCK=1
+
+# NVM
+export NVM_DIR="\$HOME/.nvm"
+[[ -s "\$NVM_DIR/nvm.sh" ]] && \. "\$NVM_DIR/nvm.sh"
+[[ -s "\$NVM_DIR/bash_completion" ]] && \. "\$NVM_DIR/bash_completion"
 
 # Faster directory navigation
 setopt autocd
@@ -99,6 +118,8 @@ alias ......='../../../../..'
 alias lfg="codex --yolo"
 ${end_marker}
 EOF
+
+  mv "${tmp_file}" "${zshrc_path}"
 }
 
 configure_zshrc() {
