@@ -11,6 +11,7 @@ source "${SCRIPT_DIR}/lib/fonts.sh"
 source "${SCRIPT_DIR}/lib/casks.sh"
 source "${SCRIPT_DIR}/lib/mas.sh"
 source "${SCRIPT_DIR}/lib/npm.sh"
+source "${SCRIPT_DIR}/lib/skills.sh"
 source "${SCRIPT_DIR}/lib/cursor.sh"
 source "${SCRIPT_DIR}/lib/dock.sh"
 source "${SCRIPT_DIR}/lib/postflight.sh"
@@ -25,6 +26,7 @@ main() {
   install_brew_casks
   install_mas_apps
   install_npm_packages
+  install_skills
   install_cursor_extensions
   configure_dock
   configure_zshrc
