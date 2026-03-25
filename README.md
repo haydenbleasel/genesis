@@ -35,6 +35,5 @@ The script is designed to be rerun. It skips installed Homebrew formulae, casks,
 - macOS only
 - An internet connection
 - Sign in to the Mac App Store before running if you want `mas` installs to succeed
-- Install the Cursor CLI before running if you want extension installs to succeed
 
-If the App Store account or Cursor CLI is unavailable, Genesis skips those steps and prints a message.
+If the App Store account is unavailable, Genesis skips those steps and prints a message.

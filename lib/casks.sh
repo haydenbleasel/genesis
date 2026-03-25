@@ -9,6 +9,7 @@ install_brew_casks() {
     "codex"
     "codex-app"
     "cursor"
+    "cursor-cli"
     "discord"
     "figma"
     "github"
