@@ -28,7 +28,7 @@ The script is designed to be rerun. It skips installed Homebrew formulae, casks,
 - Installs the npm packages listed in [`lib/npm.sh`](/Users/haydenbleasel/GitHub/genesis/lib/npm.sh)
 - Installs the Cursor extensions listed in [`lib/cursor.sh`](/Users/haydenbleasel/GitHub/genesis/lib/cursor.sh)
 - Configures the Dock order listed in [`lib/dock.sh`](/Users/haydenbleasel/GitHub/genesis/lib/dock.sh)
-- Appends shell config to `.zshrc` using [`lib/zshrc.sh`](/Users/haydenbleasel/GitHub/genesis/lib/zshrc.sh)
+- Updates `.zshrc` using [`lib/zshrc.sh`](/Users/haydenbleasel/GitHub/genesis/lib/zshrc.sh), enabling the Oh My Zsh `git` plugin when available plus `autocd` and dot-directory shortcuts
 
 ## Prerequisites
 
