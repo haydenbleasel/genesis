@@ -4,6 +4,7 @@ install_brew_libs() {
     "oven-sh/bun/bun"
     "dockutil"
     "ffmpeg"
+    "gh"
     "git"
     "git-lfs"
     "mas"
