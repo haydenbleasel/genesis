@@ -1,6 +1,5 @@
 configure_dock() {
   local dock_items=(
-    "/System/Library/CoreServices/Finder.app"
     "/System/Applications/Calendar.app"
     "/System/Applications/Notes.app"
     "/Applications/Google Chrome.app"
