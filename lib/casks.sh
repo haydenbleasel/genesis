@@ -6,6 +6,7 @@ install_brew_casks() {
     "beeper"
     "chatgpt"
     "cleanshot"
+    "codex"
     "codex-app"
     "cursor"
     "discord"

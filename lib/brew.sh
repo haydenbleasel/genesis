@@ -2,6 +2,7 @@ install_brew_libs() {
   local brew_libs=(
     "btop"
     "bun"
+    "dockutil"
     "ffmpeg"
     "git"
     "git-lfs"
