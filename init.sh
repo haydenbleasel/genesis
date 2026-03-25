@@ -13,6 +13,7 @@ source "${SCRIPT_DIR}/lib/mas.sh"
 source "${SCRIPT_DIR}/lib/npm.sh"
 source "${SCRIPT_DIR}/lib/cursor.sh"
 source "${SCRIPT_DIR}/lib/dock.sh"
+source "${SCRIPT_DIR}/lib/postflight.sh"
 source "${SCRIPT_DIR}/lib/zshrc.sh"
 
 main() {
@@ -27,6 +28,7 @@ main() {
   install_cursor_extensions
   configure_dock
   configure_zshrc
+  print_postflight_steps
 }
 
 main "$@"
