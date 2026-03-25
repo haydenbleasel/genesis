@@ -14,13 +14,13 @@ install_mas_apps() {
     return
   fi
 
-  if ! mas account >/dev/null 2>&1; then
-    echo "Skipping Mac App Store installs; sign in to the App Store and rerun Genesis"
-    return
-  fi
-
   local installed_app_ids
-  installed_app_ids="$(mas list | awk '{print $1}')"
+  if installed_app_ids="$(mas list 2>/dev/null | awk '{print $1}')"; then
+    :
+  else
+    echo "Unable to read installed Mac App Store apps; continuing with installs"
+    installed_app_ids=""
+  fi
 
   local app_id
   for app_id in "${mas_apps[@]}"; do
@@ -29,6 +29,8 @@ install_mas_apps() {
       continue
     fi
 
-    mas install "${app_id}"
+    if ! mas install "${app_id}"; then
+      echo "Unable to install App Store app ${app_id}; confirm App Store access and rerun Genesis"
+    fi
   done
 }
