@@ -116,6 +116,7 @@ alias ......='../../../../..'
 
 # Let's fkn go
 alias lfg="codex --yolo"
+alias code="cursor"
 ${end_marker}
 EOF
 

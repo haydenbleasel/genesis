@@ -3,7 +3,6 @@ install_brew_casks() {
     "1password-cli"
     "1password"
     "arc"
-    "beeper"
     "chatgpt"
     "cleanshot"
     "codex"

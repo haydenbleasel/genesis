@@ -9,7 +9,7 @@ configure_dock() {
     "/Applications/Typefully.app"
     "/Applications/Slack.app"
     "/Applications/Spark Desktop.app"
-    "/Applications/Beeper.app"
+    "/Applications/Signal.app"
     "/Applications/Discord.app"
     "/System/Applications/Messages.app"
     "/Applications/ChatGPT.app"
