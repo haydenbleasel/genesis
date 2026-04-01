@@ -15,6 +15,7 @@ install_skills() {
   install_skill "https://github.com/vercel-labs/next-skills" --skill next-best-practices
   install_skill "https://github.com/shadcn/ui" --skill shadcn
   install_skill "https://github.com/vercel/ai" --skill ai-sdk
+  install_skill "https://github.com/vercel/workflow" --skill workflow
   install_skill "https://github.com/vercel/turborepo" --skill turborepo
   install_skill "https://github.com/vercel-labs/next-skills" --skill next-cache-components
 
