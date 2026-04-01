@@ -18,6 +18,7 @@ install_skills() {
   install_skill "https://github.com/vercel/workflow" --skill workflow
   install_skill "https://github.com/vercel/turborepo" --skill turborepo
   install_skill "https://github.com/vercel-labs/next-skills" --skill next-cache-components
+  install_skill "https://bun.sh/docs"
 
   install_skill "better-auth/skills"
   install_skill "get-convex/agent-skills"
