@@ -1,3 +1,6 @@
+#!/usr/bin/env bash
+# shellcheck shell=bash
+
 ensure_macos() {
   if [[ "$(uname -s)" != "Darwin" ]]; then
     echo "Genesis only supports macOS." >&2

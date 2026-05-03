@@ -1,3 +1,6 @@
+#!/usr/bin/env bash
+# shellcheck shell=bash
+
 install_mas_apps() {
   local mas_apps=(
     "411643860" # DaisyDisk

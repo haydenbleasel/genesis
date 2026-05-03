@@ -1,3 +1,6 @@
+#!/usr/bin/env bash
+# shellcheck shell=bash
+
 configure_dock() {
   local dock_items=(
     "/System/Applications/Calendar.app"

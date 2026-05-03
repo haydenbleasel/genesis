@@ -1,3 +1,6 @@
+#!/usr/bin/env bash
+# shellcheck shell=bash
+
 setup_nvm() {
   export NVM_DIR="${HOME}/.nvm"
 

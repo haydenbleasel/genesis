@@ -1,3 +1,6 @@
+#!/usr/bin/env bash
+# shellcheck shell=bash
+
 print_postflight_steps() {
   cat <<'EOF'
 

@@ -1,3 +1,6 @@
+#!/usr/bin/env bash
+# shellcheck shell=bash
+
 install_brew_casks() {
   local brew_casks=(
     "1password-cli"

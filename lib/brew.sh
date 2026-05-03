@@ -1,3 +1,6 @@
+#!/usr/bin/env bash
+# shellcheck shell=bash
+
 install_brew_libs() {
   local brew_libs=(
     "btop"

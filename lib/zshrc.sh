@@ -1,3 +1,6 @@
+#!/usr/bin/env bash
+# shellcheck shell=bash
+
 ensure_oh_my_zsh_git_plugin() {
   local zshrc_path="$1"
 

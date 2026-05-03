@@ -1,3 +1,6 @@
+#!/usr/bin/env bash
+# shellcheck shell=bash
+
 install_cursor_extensions() {
   local extensions=(
     "astro-build.astro-vscode"

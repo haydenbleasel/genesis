@@ -1,3 +1,6 @@
+#!/usr/bin/env bash
+# shellcheck shell=bash
+
 install_fonts() {
   local font_casks=(
     "font-geist"

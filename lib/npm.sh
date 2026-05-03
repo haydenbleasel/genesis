@@ -1,3 +1,6 @@
+#!/usr/bin/env bash
+# shellcheck shell=bash
+
 install_npm_packages() {
   local npm_packages=(
     "vercel"
