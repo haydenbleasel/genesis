@@ -1,0 +1,10 @@
+{
+    "security.promptForLocalFileProtocolHandling": false,
+    "explorer.confirmDelete": false,
+    "workbench.colorTheme": "Moonlight II",
+    "window.zoomLevel": 1,
+    "workbench.layoutControl.enabled": false,
+    "explorer.confirmDragAndDrop": false,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "workbench.statusBar.visible": false
+}

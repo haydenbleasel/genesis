@@ -10,6 +10,7 @@ source "${SCRIPT_DIR}/lib/bundle.sh"
 source "${SCRIPT_DIR}/lib/npm.sh"
 source "${SCRIPT_DIR}/lib/skills.sh"
 source "${SCRIPT_DIR}/lib/cursor.sh"
+source "${SCRIPT_DIR}/lib/dotfiles.sh"
 source "${SCRIPT_DIR}/lib/defaults.sh"
 source "${SCRIPT_DIR}/lib/dock.sh"
 source "${SCRIPT_DIR}/lib/git.sh"
@@ -24,6 +25,7 @@ main() {
   install_npm_packages
   install_skills
   install_cursor_extensions
+  link_dotfiles
   configure_defaults
   configure_dock
   configure_git_defaults
