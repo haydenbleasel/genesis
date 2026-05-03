@@ -23,8 +23,16 @@ install_cursor_extensions() {
     return
   fi
 
+  local installed_extensions=""
+  installed_extensions="$(cursor --list-extensions 2>/dev/null || true)"
+
   local extension
   for extension in "${extensions[@]}"; do
+    if grep -qix "${extension}" <<< "${installed_extensions}"; then
+      echo "Skipping ${extension}; already installed"
+      continue
+    fi
+
     cursor --install-extension "${extension}"
   done
 }
