@@ -12,6 +12,7 @@ source "${SCRIPT_DIR}/lib/skills.sh"
 source "${SCRIPT_DIR}/lib/cursor.sh"
 source "${SCRIPT_DIR}/lib/defaults.sh"
 source "${SCRIPT_DIR}/lib/dock.sh"
+source "${SCRIPT_DIR}/lib/git.sh"
 source "${SCRIPT_DIR}/lib/postflight.sh"
 source "${SCRIPT_DIR}/lib/zshrc.sh"
 
@@ -25,6 +26,7 @@ main() {
   install_cursor_extensions
   configure_defaults
   configure_dock
+  configure_git_defaults
   configure_zshrc
   print_postflight_steps
 }

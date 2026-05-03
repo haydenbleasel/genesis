@@ -27,6 +27,7 @@ The script is designed to be rerun. It skips installed Homebrew formulae, casks,
 - Installs the Cursor extensions listed in [`lib/cursor.sh`](lib/cursor.sh)
 - Applies the macOS `defaults` listed in [`lib/defaults.sh`](lib/defaults.sh)
 - Configures the Dock order listed in [`lib/dock.sh`](lib/dock.sh)
+- Sets sensible git defaults via [`lib/git.sh`](lib/git.sh) (`init.defaultBranch=main`, `push.autoSetupRemote=true`); identity, SSH, and commit signing are left to GitHub Desktop, 1Password's developer SSH agent, and `gh auth login`
 - Updates `.zshrc` using [`lib/zshrc.sh`](lib/zshrc.sh), enabling the Oh My Zsh `git` plugin when available, loading `nvm` in future zsh sessions, plus `autocd` and dot-directory shortcuts
 - Prints the manual follow-up steps listed in [`lib/postflight.sh`](lib/postflight.sh)
 
