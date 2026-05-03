@@ -25,6 +25,7 @@ The script is designed to be rerun. It skips installed Homebrew formulae, casks,
 - Installs the Homebrew formulae, casks, fonts, and Mac App Store apps listed in [`Brewfile`](Brewfile) via `brew bundle`
 - Installs the npm packages listed in [`lib/npm.sh`](lib/npm.sh)
 - Installs the Cursor extensions listed in [`lib/cursor.sh`](lib/cursor.sh)
+- Applies the macOS `defaults` listed in [`lib/defaults.sh`](lib/defaults.sh)
 - Configures the Dock order listed in [`lib/dock.sh`](lib/dock.sh)
 - Updates `.zshrc` using [`lib/zshrc.sh`](lib/zshrc.sh), enabling the Oh My Zsh `git` plugin when available, loading `nvm` in future zsh sessions, plus `autocd` and dot-directory shortcuts
 - Prints the manual follow-up steps listed in [`lib/postflight.sh`](lib/postflight.sh)

@@ -10,6 +10,7 @@ source "${SCRIPT_DIR}/lib/bundle.sh"
 source "${SCRIPT_DIR}/lib/npm.sh"
 source "${SCRIPT_DIR}/lib/skills.sh"
 source "${SCRIPT_DIR}/lib/cursor.sh"
+source "${SCRIPT_DIR}/lib/defaults.sh"
 source "${SCRIPT_DIR}/lib/dock.sh"
 source "${SCRIPT_DIR}/lib/postflight.sh"
 source "${SCRIPT_DIR}/lib/zshrc.sh"
@@ -22,6 +23,7 @@ main() {
   install_npm_packages
   install_skills
   install_cursor_extensions
+  configure_defaults
   configure_dock
   configure_zshrc
   print_postflight_steps
