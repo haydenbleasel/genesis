@@ -22,15 +22,15 @@ The script is designed to be rerun. It skips installed Homebrew formulae, casks,
 
 - Installs Homebrew if it is missing, then runs `brew update` and `brew upgrade`
 - Installs `nvm`, then installs and activates Node.js `24`
-- Installs the Homebrew formulae listed in [`lib/brew.sh`](/Users/haydenbleasel/GitHub/genesis/lib/brew.sh)
-- Installs the font casks listed in [`lib/fonts.sh`](/Users/haydenbleasel/GitHub/genesis/lib/fonts.sh)
-- Installs the Homebrew casks listed in [`lib/casks.sh`](/Users/haydenbleasel/GitHub/genesis/lib/casks.sh)
-- Installs the Mac App Store apps listed in [`lib/mas.sh`](/Users/haydenbleasel/GitHub/genesis/lib/mas.sh)
-- Installs the npm packages listed in [`lib/npm.sh`](/Users/haydenbleasel/GitHub/genesis/lib/npm.sh)
-- Installs the Cursor extensions listed in [`lib/cursor.sh`](/Users/haydenbleasel/GitHub/genesis/lib/cursor.sh)
-- Configures the Dock order listed in [`lib/dock.sh`](/Users/haydenbleasel/GitHub/genesis/lib/dock.sh)
-- Updates `.zshrc` using [`lib/zshrc.sh`](/Users/haydenbleasel/GitHub/genesis/lib/zshrc.sh), enabling the Oh My Zsh `git` plugin when available, loading `nvm` in future zsh sessions, plus `autocd` and dot-directory shortcuts
-- Prints the manual follow-up steps listed in [`lib/postflight.sh`](/Users/haydenbleasel/GitHub/genesis/lib/postflight.sh)
+- Installs the Homebrew formulae listed in [`lib/brew.sh`](lib/brew.sh)
+- Installs the font casks listed in [`lib/fonts.sh`](lib/fonts.sh)
+- Installs the Homebrew casks listed in [`lib/casks.sh`](lib/casks.sh)
+- Installs the Mac App Store apps listed in [`lib/mas.sh`](lib/mas.sh)
+- Installs the npm packages listed in [`lib/npm.sh`](lib/npm.sh)
+- Installs the Cursor extensions listed in [`lib/cursor.sh`](lib/cursor.sh)
+- Configures the Dock order listed in [`lib/dock.sh`](lib/dock.sh)
+- Updates `.zshrc` using [`lib/zshrc.sh`](lib/zshrc.sh), enabling the Oh My Zsh `git` plugin when available, loading `nvm` in future zsh sessions, plus `autocd` and dot-directory shortcuts
+- Prints the manual follow-up steps listed in [`lib/postflight.sh`](lib/postflight.sh)
 
 ## Prerequisites
 
