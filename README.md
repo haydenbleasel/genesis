@@ -22,10 +22,7 @@ The script is designed to be rerun. It skips installed Homebrew formulae, casks,
 
 - Installs Homebrew if it is missing, then runs `brew update` and `brew upgrade`
 - Installs `nvm`, then installs and activates Node.js `24`
-- Installs the Homebrew formulae listed in [`lib/brew.sh`](lib/brew.sh)
-- Installs the font casks listed in [`lib/fonts.sh`](lib/fonts.sh)
-- Installs the Homebrew casks listed in [`lib/casks.sh`](lib/casks.sh)
-- Installs the Mac App Store apps listed in [`lib/mas.sh`](lib/mas.sh)
+- Installs the Homebrew formulae, casks, fonts, and Mac App Store apps listed in [`Brewfile`](Brewfile) via `brew bundle`
 - Installs the npm packages listed in [`lib/npm.sh`](lib/npm.sh)
 - Installs the Cursor extensions listed in [`lib/cursor.sh`](lib/cursor.sh)
 - Configures the Dock order listed in [`lib/dock.sh`](lib/dock.sh)
