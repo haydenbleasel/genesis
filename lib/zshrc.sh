@@ -117,7 +117,7 @@ alias ......='../../../../..'
 # Other alias'
 alias lfg="codex --yolo"
 alias code="cursor"
-alias update="brew upgrade && brew update"
+alias update="brew update && brew upgrade"
 ${end_marker}
 EOF
 
