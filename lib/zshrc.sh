@@ -24,13 +24,14 @@ ensure_oh_my_zsh_git_plugin() {
     local plugins_tmp_file
     plugins_tmp_file="$(mktemp)"
 
-    awk '
+    if awk '
       BEGIN {
         updated = 0
       }
       /^[[:space:]]*plugins=\(/ && updated == 0 {
-        sub(/\)[[:space:]]*$/, " git)")
-        updated = 1
+        if (sub(/\)[[:space:]]*$/, " git)")) {
+          updated = 1
+        }
       }
       {
         print
@@ -40,10 +41,13 @@ ensure_oh_my_zsh_git_plugin() {
           exit 1
         }
       }
-    ' "${zshrc_path}" > "${plugins_tmp_file}"
-
-    mv "${plugins_tmp_file}" "${zshrc_path}"
-    echo "Enabled Oh My Zsh git plugin"
+    ' "${zshrc_path}" > "${plugins_tmp_file}"; then
+      mv "${plugins_tmp_file}" "${zshrc_path}"
+      echo "Enabled Oh My Zsh git plugin"
+    else
+      rm -f "${plugins_tmp_file}"
+      echo "Skipping Oh My Zsh plugin config; could not update the plugins array in ${zshrc_path} (add git to it manually)"
+    fi
     return
   fi
 
