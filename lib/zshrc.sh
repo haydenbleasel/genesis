@@ -50,11 +50,11 @@ ensure_oh_my_zsh_git_plugin() {
   local source_tmp_file
   source_tmp_file="$(mktemp)"
 
-  awk '
+  if awk '
     BEGIN {
       updated = 0
     }
-    /source[[:space:]]+\$ZSH\/oh-my-zsh\.sh/ && updated == 0 {
+    /source[[:space:]]+["'\'']?\$ZSH\/oh-my-zsh\.sh/ && updated == 0 {
       print "plugins=(git)"
       updated = 1
     }
@@ -66,10 +66,13 @@ ensure_oh_my_zsh_git_plugin() {
         exit 1
       }
     }
-  ' "${zshrc_path}" > "${source_tmp_file}"
-
-  mv "${source_tmp_file}" "${zshrc_path}"
-  echo "Enabled Oh My Zsh git plugin"
+  ' "${zshrc_path}" > "${source_tmp_file}"; then
+    mv "${source_tmp_file}" "${zshrc_path}"
+    echo "Enabled Oh My Zsh git plugin"
+  else
+    rm -f "${source_tmp_file}"
+    echo "Skipping Oh My Zsh plugin config; could not find the oh-my-zsh.sh source line in ${zshrc_path}"
+  fi
 }
 
 ensure_genesis_zshrc_block() {
