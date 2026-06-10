@@ -88,9 +88,12 @@ ensure_genesis_zshrc_block() {
   local tmp_file
   tmp_file="$(mktemp)"
 
+  # Trailing blank lines are buffered and dropped at EOF so the blank line
+  # printed before the start marker does not accumulate across reruns.
   awk -v start="${start_marker}" -v end="${end_marker}" '
     BEGIN {
       in_block = 0
+      pending = 0
     }
     index($0, start) == 1 {
       in_block = 1
@@ -101,6 +104,14 @@ ensure_genesis_zshrc_block() {
       next
     }
     in_block == 0 {
+      if ($0 ~ /^[[:space:]]*$/) {
+        blanks[++pending] = $0
+        next
+      }
+      for (i = 1; i <= pending; i++) {
+        print blanks[i]
+      }
+      pending = 0
       print
     }
   ' "${zshrc_path}" > "${tmp_file}"
