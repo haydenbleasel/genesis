@@ -40,7 +40,4 @@ ensure_homebrew() {
 
   echo "Upgrading installed formulae..."
   brew upgrade
-
-  export BREW_PREFIX
-  BREW_PREFIX="$(brew --prefix)"
 }
