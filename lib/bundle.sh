@@ -10,7 +10,7 @@ install_bundle() {
   fi
 
   echo "Installing Brewfile..."
-  if ! brew bundle --file="${brewfile}" --no-lock; then
+  if ! brew bundle --file="${brewfile}"; then
     echo "Some Brewfile entries failed (Mac App Store sign-in is the most common cause); rerun Genesis after resolving"
   fi
 }
