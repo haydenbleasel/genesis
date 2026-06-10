@@ -31,7 +31,7 @@ install_cursor_extensions() {
 
   local extension
   for extension in "${extensions[@]}"; do
-    if grep -qix "${extension}" <<< "${installed_extensions}"; then
+    if grep -Fqix "${extension}" <<< "${installed_extensions}"; then
       echo "Skipping ${extension}; already installed"
       continue
     fi

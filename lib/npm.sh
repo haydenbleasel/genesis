@@ -11,7 +11,7 @@ install_npm_packages() {
 
   local package
   for package in "${npm_packages[@]}"; do
-    if grep -qE "/node_modules/${package}\$" <<< "${installed_packages}"; then
+    if grep -qE "/node_modules/${package//./\\.}\$" <<< "${installed_packages}"; then
       echo "Skipping ${package}; already installed"
       continue
     fi
