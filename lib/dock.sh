@@ -37,5 +37,5 @@ configure_dock() {
     dockutil --add "${app_path}" --no-restart
   done
 
-  killall Dock
+  killall Dock >/dev/null 2>&1 || true
 }
