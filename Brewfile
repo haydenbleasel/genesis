@@ -56,7 +56,9 @@ cask "font-foundry-sterling"
 cask "font-geist"
 cask "font-geist-mono"
 cask "font-geist-pixel"
-cask "font-ibm-plex"
+cask "font-ibm-plex-mono"
+cask "font-ibm-plex-sans"
+cask "font-ibm-plex-serif"
 cask "font-inter"
 cask "font-lato"
 cask "font-libre-franklin"
@@ -88,3 +90,4 @@ mas "HandMirror",    id: 1502839586
 mas "Klack",         id: 6446206067
 mas "MyMind",        id: 1532801185
 mas "Shazam",        id: 897118787
+mas "Xcode",         id: 497799835
