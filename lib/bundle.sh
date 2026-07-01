@@ -10,6 +10,8 @@ install_bundle() {
   fi
 
   echo "Installing Brewfile..."
+  # Trust the third-party bun tap so brew bundle won't fail when HOMEBREW_REQUIRE_TAP_TRUST is set
+  brew trust --tap oven-sh/bun
   if ! brew bundle --file="${brewfile}"; then
     echo "Some Brewfile entries failed (Mac App Store sign-in is the most common cause); rerun Genesis after resolving"
   fi

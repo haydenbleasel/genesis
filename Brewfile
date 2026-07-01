@@ -41,6 +41,7 @@ cask "spotify"
 cask "typefully"
 cask "warp"
 cask "whatsapp"
+cask "zed"
 cask "zoom"
 
 # Fonts
