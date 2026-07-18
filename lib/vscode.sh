@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # shellcheck shell=bash
 
-install_cursor_extensions() {
+install_vscode_extensions() {
   local extensions=(
     "astro-build.astro-vscode"
     "atomiks.moonlight"
@@ -21,13 +21,13 @@ install_cursor_extensions() {
     "YoavBls.pretty-ts-errors"
   )
 
-  if ! command -v cursor >/dev/null 2>&1; then
-    echo "Skipping Cursor extensions; install the Cursor CLI and rerun Genesis"
+  if ! command -v code >/dev/null 2>&1; then
+    echo "Skipping VS Code extensions; install the VS Code CLI and rerun Genesis"
     return
   fi
 
   local installed_extensions=""
-  installed_extensions="$(cursor --list-extensions 2>/dev/null || true)"
+  installed_extensions="$(code --list-extensions 2>/dev/null || true)"
 
   local extension
   for extension in "${extensions[@]}"; do
@@ -36,6 +36,6 @@ install_cursor_extensions() {
       continue
     fi
 
-    cursor --install-extension "${extension}"
+    code --install-extension "${extension}"
   done
 }

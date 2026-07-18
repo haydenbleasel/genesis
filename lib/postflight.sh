@@ -12,7 +12,7 @@ Genesis finished. Manual steps:
 - Sign in to npm: `npm login`
 - Sign in to Stripe: `stripe login`
 - If any `mas` installs failed, open the App Store app and sign in there (Apple removed `mas signin` in macOS 10.13+), then rerun Genesis
-- Open Cursor once if you need to finish CLI or extension setup
+- Open Visual Studio Code once if you need to finish CLI or extension setup
 
 EOF
 }

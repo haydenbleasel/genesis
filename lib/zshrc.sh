@@ -137,7 +137,7 @@ alias ......='../../../../..'
 
 # Other alias'
 alias lfg="codex --yolo"
-alias code="cursor"
+alias code="/opt/homebrew/bin/code"
 alias update="brew update && brew upgrade"
 ${end_marker}
 EOF

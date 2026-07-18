@@ -7,7 +7,7 @@ configure_dock() {
     "/System/Applications/Notes.app"
     "/Applications/Google Chrome.app"
     "/Applications/Warp.app"
-    "/Applications/Cursor.app"
+    "/Applications/Visual Studio Code.app"
     "/Applications/GitHub Desktop.app"
     "/Applications/Typefully.app"
     "/Applications/Slack.app"

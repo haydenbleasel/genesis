@@ -1,6 +1,6 @@
 # Genesis
 
-Personal macOS bootstrap script for setting up a new machine with Homebrew, Node.js, fonts, App Store apps, npm packages, Cursor extensions, a preferred Dock layout, and shell defaults.
+Personal macOS bootstrap script for setting up a new machine with Homebrew, Node.js, fonts, App Store apps, npm packages, VS Code extensions, a preferred Dock layout, and shell defaults.
 
 ## Usage
 
@@ -24,8 +24,7 @@ The script is designed to be rerun. It skips installed Homebrew formulae, casks,
 - Installs `nvm`, then installs and activates Node.js `24`
 - Installs the Homebrew formulae, casks, fonts, and Mac App Store apps listed in [`Brewfile`](Brewfile) via `brew bundle`
 - Installs the npm packages listed in [`lib/npm.sh`](lib/npm.sh)
-- Installs the Cursor extensions listed in [`lib/cursor.sh`](lib/cursor.sh)
-- Symlinks the tracked configs in [`dotfiles/`](dotfiles) into place via [`lib/dotfiles.sh`](lib/dotfiles.sh) (existing files are backed up with a timestamped suffix, not overwritten)
+- Installs the VS Code extensions listed in [`lib/vscode.sh`](lib/vscode.sh)
 - Applies the macOS `defaults` listed in [`lib/defaults.sh`](lib/defaults.sh)
 - Configures the Dock order listed in [`lib/dock.sh`](lib/dock.sh)
 - Sets sensible git defaults via [`lib/git.sh`](lib/git.sh) (`init.defaultBranch=main`, `push.autoSetupRemote=true`); identity, SSH, and commit signing are left to GitHub Desktop, 1Password's developer SSH agent, and `gh auth login`
